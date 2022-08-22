@@ -18,6 +18,7 @@ lowercase = "abcdefghijklmnopqrstuvwxyz"
 uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 num = '1234567890'
 
+# Randomize above character lists
 def randomize(input_string):
     list_string = list(input_string)
     random.shuffle(list_string)
@@ -32,6 +33,7 @@ rand_spec = randomize(special_char)
 
 final_rand = randomize(rand_spec[0:1] + rand_num[0:1] + rand_up[0:1] + rand_low[0:5])
 
+#The way the code has been written so far, the makeup of the password would always be in the same order. This final randomization makes the order truly random.
 print(final_rand)
 
 
